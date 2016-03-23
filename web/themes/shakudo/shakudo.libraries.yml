@@ -1,0 +1,8 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      stylesheets/ie.css: {}
+      stylesheets/screen.css: {}
+      stylesheets/print.css: { media: print }
+      http://fonts.googleapis.com/css?family=Gentium+Basic: {}

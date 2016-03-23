@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Shoami theme.
+ */
+
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function shakudo_preprocess_block(&$variables) {
+  dsm($variables['plugin_id']);
+
+  switch($variables['plugin_id']) {
+    case 'local_tasks_block':
+      $variables['attributes']['class'][] = 'action-tabs';
+      break;
+    case 'system_menu_block:main':
+      $variables['attributes']['class'][] = 'main-menu';
+      break;
+    case 'system_branding_block':
+      $variables['attributes']['class'][] = 'site-name-and-slogan';
+      dd($variables);
+      // Hack logo until https://www.drupal.org/node/1507896 lands.
+      // * (https://www.drupal.org/node/2472127)
+      $variables['site_logo'] = '';
+      if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+        $variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+      }
+
+      break;
+  }
+}
+
+
+

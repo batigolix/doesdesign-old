@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = '3Sy-IUVMx1YkIOIRrZFgf-5VtX74kFJfAJjLib7pYTRLrNXhthH3kObIURnb06FoAFiCXzNbZw';
 
 /**
  * Deployment identifier.
@@ -717,3 +717,15 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 # if (file_exists(__DIR__ . '/settings.local.php')) {
 #   include __DIR__ . '/settings.local.php';
 # }
+$databases['default']['default'] = array (
+  'database' => 'dd1',
+  'username' => 'root',
+  'password' => 'root',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['install_profile'] = 'minimal';
+$config_directories['sync'] = 'sites/default/files/config_Xi6Ru6RjtC2TVm1kuzl8m9FN3bA0eV_CHiXnxNaZUmXa3JLQN8MOwDbmccwfCwOKr8VUgaksGA/sync';

@@ -1,0 +1,47 @@
+name: Shakudo
+type: theme
+description: The D8 theme for the Doesdesign website
+package: Custom
+version: 8.x-1.x-dev
+core: 8.x
+libraries:
+  - shakudo/global-styling
+stylesheets-remove:
+  - normalize.css
+
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  help: Help
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: 'Footer'
+
+#  help: 'Help'
+#  highlighted: 'Highlighted'
+#  content: 'Content'
+#  content_top: 'Content top'
+#  sidebar_first: 'First sidebar'
+#  sidebar_second: 'Second sidebar'
+#  footer: 'Footer'
+#  page_top: 'Page top'
+#  header1: 'Header Right 1st Col'
+#  header2: 'Header Right 2nd Col'
+#  content_top: 'Content top'
+#  sidebar: 'Sidebar'
+
+#;;features[] = logo
+#;features[] = name
+#;features[] = slogan
+#;features[] = node_user_picture
+#features[] = comment_user_picture
+#features[] = search
+#features[] = favicon
+#features[] = main_menu
+#features[] = secondary_menu
+
+
+#scripts[] = js/scripts.js
+
