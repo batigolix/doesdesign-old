@@ -1,0 +1,10 @@
+name: 'Doesdesign tools'
+description: 'Misc. code for doesdesign project'
+core: 8.x
+dependencies:
+#- locale
+- responsive_image
+type: module
+package: Custom
+version: VERSION
+#configure: user.admin_index
