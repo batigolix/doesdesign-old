@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6c4405f395c2c75e13edf4bec2662537",
-    "content-hash": "f83703fc448c817d8f94d55f51469eeb",
+    "hash": "495b80eeef3744e4897b8132c542ee83",
+    "content-hash": "dfa7c98a1f82a896cff8f8b4d0013613",
     "packages": [
         {
             "name": "codegyre/robo",
@@ -742,6 +742,37 @@
             "time": "2016-02-23 18:09:09"
         },
         {
+            "name": "drupal/coffee",
+            "version": "8.1.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/coffee",
+                "reference": "1b3a3185ade57f97ba64def2b40c70a47c310260"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/coffee-8.x-1.0-beta1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides an Alfred like search box to navigate within your site.",
+            "homepage": "https://www.drupal.org/project/coffee",
+            "time": "2016-01-15 13:19:51"
+        },
+        {
             "name": "drupal/console",
             "version": "0.10.14",
             "source": {
@@ -1032,6 +1063,159 @@
             "description": "Various blocks, pages, and functions for developers.",
             "homepage": "http://drupal.org/project/devel",
             "time": "2016-03-14 20:10:03"
+        },
+        {
+            "name": "drupal/migrate_manifest",
+            "version": "8.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/migrate_manifest.git",
+                "reference": "0dff781e8c714675adaaed3b9c6d79dea2332c51"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_manifest-8.x-1.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/migrate_tools": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Supports the running of migrations using a structured manifest file.",
+            "homepage": "https://www.drupal.org/project/migrate_manifest",
+            "time": "2016-02-23 16:54:28"
+        },
+        {
+            "name": "drupal/migrate_plus",
+            "version": "8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/migrate_plus.git",
+                "reference": "45d156e33311d04e2f1815bc0d66dc02f60c530b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_plus-8.x-1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/migrate": "8.*",
+                "drupal/system": "<8.1.0"
+            },
+            "replace": {
+                "drupal/migrate_example": "self.version",
+                "drupal/migrate_example_advanced": "self.version",
+                "drupal/migrate_example_advanced_setup": "self.version",
+                "drupal/migrate_example_setup": "self.version"
+            },
+            "suggest": {
+                "drupal/comment": "Required by drupal/migrate_example_setup, drupal/migrate_example_advanced_setup",
+                "drupal/core": "Required by drupal/migrate_example, drupal/migrate_example_setup, drupal/migrate_example_advanced, drupal/migrate_example_advanced_setup",
+                "drupal/image": "Required by drupal/migrate_example_setup, drupal/migrate_example_advanced_setup",
+                "drupal/migrate": "Required by drupal/migrate_example, drupal/migrate_example_advanced",
+                "drupal/migrate_example_advanced_setup": "Required by drupal/migrate_example_advanced",
+                "drupal/migrate_example_setup": "Required by drupal/migrate_example",
+                "drupal/migrate_source_json": "Required by drupal/migrate_example_advanced",
+                "drupal/migrate_source_xml": "Required by drupal/migrate_example_advanced",
+                "drupal/options": "Required by drupal/migrate_example_setup",
+                "drupal/rest": "Required by drupal/migrate_example_advanced_setup",
+                "drupal/taxonomy": "Required by drupal/migrate_example_setup, drupal/migrate_example_advanced_setup",
+                "drupal/text": "Required by drupal/migrate_example_setup, drupal/migrate_example_advanced_setup"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Enhancements to core migration support",
+            "homepage": "https://www.drupal.org/project/migrate_plus",
+            "time": "2016-03-16 20:28:22"
+        },
+        {
+            "name": "drupal/migrate_tools",
+            "version": "8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/migrate_tools.git",
+                "reference": "31b72a98fa0d4d869a069a7cdda77d6a831142e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_tools-8.x-1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/migrate_plus": "8.*",
+                "drupal/system": "<8.1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Tools to assist in developing and running migrations.",
+            "homepage": "https://www.drupal.org/project/migrate_tools",
+            "time": "2016-03-16 20:32:43"
+        },
+        {
+            "name": "drupal/migrate_upgrade",
+            "version": "8.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/migrate_upgrade.git",
+                "reference": "72aaaf16891a78597a14b2a72a8c4f195628e91c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/migrate_upgrade-8.x-1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/dblog": "8.*",
+                "drupal/migrate": "8.*",
+                "drupal/migrate_drupal": "8.*",
+                "drupal/system": "<8.1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "UI for direct upgrades from older Drupal versions.",
+            "homepage": "https://www.drupal.org/project/migrate_upgrade",
+            "time": "2016-03-05 19:30:44"
         },
         {
             "name": "drush/drush",

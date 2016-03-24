@@ -22,7 +22,11 @@
         "drupal/core": "8.0.*",
         "drush/drush": "~8.0",
         "drupal/console": "~0.10",
-        "drupal/devel": "8.*"
+        "drupal/devel": "8.*",
+        "drupal/coffee": "8.*",
+        "drupal/migrate_tools": "8.*",
+        "drupal/migrate_upgrade": "8.*",
+        "drupal/migrate_manifest": "8.*"
     },
     "require-dev": {
         "behat/mink": "~1.6",
