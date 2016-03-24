@@ -1,3 +1,6 @@
 
-- test shakudo theme
-- test sitename, slogan, email
+- shakudo theme
+- sitename, slogan, email
+- dd8 tools
+- dd8 tools blocks
+- homepage
