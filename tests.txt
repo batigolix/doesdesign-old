@@ -4,3 +4,8 @@
 - dd8 tools
 - dd8 tools blocks
 - homepage
+- devel not enabled
+- slideshow block on homepage
+- contact block in header
+- flickr block in sidebar
+- google translate block in sidebar

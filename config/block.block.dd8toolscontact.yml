@@ -9,7 +9,7 @@ dependencies:
 id: dd8toolscontact
 theme: shakudo
 region: header
-weight: -2
+weight: 0
 provider: null
 plugin: dd_tools_contact_block
 settings:

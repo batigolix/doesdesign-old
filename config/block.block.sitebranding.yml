@@ -9,7 +9,7 @@ dependencies:
 id: sitebranding
 theme: shakudo
 region: header
-weight: -2
+weight: -1
 provider: null
 plugin: system_branding_block
 settings:
