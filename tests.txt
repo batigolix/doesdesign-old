@@ -1,0 +1,3 @@
+
+- test shakudo theme
+- test sitename, slogan, email
