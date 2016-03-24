@@ -1,0 +1,9 @@
+uuid: a6850f83-7045-4482-ae09-9e2897b2dc5e
+langcode: en
+status: true
+dependencies: {  }
+name: Jaar
+vid: vocabulary_8
+description: 'Jaar waarin object gemaakt werd'
+hierarchy: 1
+weight: 0

@@ -1,20 +1,18 @@
-uuid: b4835b16-ef61-45ab-a200-a1371a843581
+uuid: 1cb3a6e0-ba24-4b0f-8d05-5b01f45329b4
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
-    - node.type.page
+    - node.type.object
   module:
     - text
-_core:
-  default_config_hash: rUop-8b6hvxxDYbv-KobTfNIBNbPY9qOPl8f6kBNSpw
-id: node.page.body
+id: node.object.body
 field_name: body
 entity_type: node
-bundle: page
-label: Body
-description: 'If you want to add a static page, like a contact page or an about page, use a page.'
+bundle: object
+label: Beschrijving
+description: ''
 required: false
 translatable: true
 default_value: {  }

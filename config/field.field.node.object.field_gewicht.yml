@@ -1,0 +1,25 @@
+uuid: e03f06a1-fa26-4a6b-8a1a-2682b1dd9fdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gewicht
+    - node.type.object
+id: node.object.field_gewicht
+field_name: field_gewicht
+entity_type: node
+bundle: object
+label: Gewicht
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: null
+default_value_callback: ''
+settings:
+  max: null
+  min: null
+  prefix: ''
+  suffix: ' gr.'
+field_type: float

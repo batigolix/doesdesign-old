@@ -1,0 +1,11 @@
+uuid: ffbb12f7-fbec-45fe-9c00-c3d1377f4999
+langcode: en
+status: true
+dependencies: {  }
+name: Object
+type: object
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

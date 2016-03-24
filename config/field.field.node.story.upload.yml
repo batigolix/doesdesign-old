@@ -1,0 +1,27 @@
+uuid: 8b570167-7dba-42f8-9a59-89d872a2dbb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.upload
+    - node.type.story
+  module:
+    - file
+id: node.story.upload
+field_name: upload
+entity_type: node
+bundle: story
+label: 'File attachments'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  max_filesize: '1 MB'
+  file_extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+  file_directory: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

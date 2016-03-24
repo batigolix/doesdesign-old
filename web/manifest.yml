@@ -1,12 +1,23 @@
+- d7_taxonomy_term
+- d7_taxonomy_vocabulary
+- taxonomy_settings
+- d7_node_settings
+#- d7_node_title_label
+- d7_user_role
+- d7_user
+- d7_field
+- d7_field_formatter_settings
+- d7_field_instance
+- d7_field_instance_widget_settings
+- d7_field_instance
+- d7_node_type
+- d7_node__story
+
 #migrate.migration.block_content_body_field
 #migrate.migration.block_content_type
 #migrate.migration.d7_block
 #migrate.migration.d7_custom_block
 #migrate.migration.d7_dblog_settings
-#migrate.migration.d7_field
-#migrate.migration.d7_field_formatter_settings
-#migrate.migration.d7_field_instance
-#migrate.migration.d7_field_instance_widget_settings
 #migrate.migration.d7_file
 #migrate.migration.d7_filter_format
 #migrate.migration.d7_image_settings
@@ -16,31 +27,19 @@
 #migrate.migration.d7_node_revision__page
 #migrate.migration.d7_node_revision__story
 #migrate.migration.d7_node_revision__webform
-#migrate.migration.d7_node_settings
-#migrate.migration.d7_node_title_label
-#migrate.migration.d7_node_type
 #migrate.migration.d7_node__blog
 #migrate.migration.d7_node__object
 #migrate.migration.d7_node__page
-#migrate.migration.d7_node__story
 #migrate.migration.d7_node__webform
 #migrate.migration.d7_search_settings
 #migrate.migration.d7_shortcut
 #migrate.migration.d7_shortcut_set
 #migrate.migration.d7_shortcut_set_users
-migrate.migration.d7_taxonomy_term
-migrate.migration.d7_taxonomy_vocabulary
-#migrate.migration.d7_url_alias
-#migrate.migration.d7_user
-#migrate.migration.d7_user_flood
-#migrate.migration.d7_user_mail
-#migrate.migration.d7_user_role
 #migrate.migration.d7_view_modes
 #migrate.migration.menu
 #migrate.migration.menu_links
 #migrate.migration.menu_settings
 #migrate.migration.search_page
-#migrate.migration.taxonomy_settings
 #migrate.migration.text_settings
 #migrate.migration.update_settings
 #migrate.migration.user_picture_entity_display

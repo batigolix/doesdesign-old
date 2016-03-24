@@ -1,27 +1,29 @@
-uuid: 5cfccc59-b055-41b6-bb47-71fb8ce196f4
+uuid: 2643bf97-babe-4e30-b705-5a3b6d0348df
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.article.body
-    - field.field.node.article.field_image
-    - field.field.node.article.field_tags
+    - field.field.node.object.body
+    - field.field.node.object.field_gewicht
+    - field.field.node.object.field_image
+    - field.field.node.object.field_prijs
+    - field.field.node.object.taxonomy_vocabulary_6
+    - field.field.node.object.taxonomy_vocabulary_7
+    - field.field.node.object.taxonomy_vocabulary_8
     - image.style.thumbnail
-    - node.type.article
+    - node.type.object
   module:
     - image
     - path
     - text
-_core:
-  default_config_hash: 7CvVDwPYotAZFBa36mcpMKZOfVRRp_iGuPHpHaavI6E
-id: node.article.default
+id: node.object.default
 targetEntityType: node
-bundle: article
+bundle: object
 mode: default
 content:
   body:
+    weight: 2
     type: text_textarea_with_summary
-    weight: 1
     settings:
       rows: 9
       summary_rows: 3
@@ -32,17 +34,24 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+  field_gewicht:
+    weight: 6
+    type: number
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_image:
+    weight: 1
     type: image_image
-    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-  field_tags:
-    type: entity_reference_autocomplete_tags
-    weight: 3
-    settings: {  }
+  field_prijs:
+    weight: 8
+    type: number
+    settings:
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path
@@ -61,9 +70,27 @@ content:
       display_label: true
     weight: 16
     third_party_settings: {  }
+  taxonomy_vocabulary_6:
+    weight: 3
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  taxonomy_vocabulary_7:
+    weight: 4
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+  taxonomy_vocabulary_8:
+    weight: 5
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: -5
     settings:
       size: 60
       placeholder: ''

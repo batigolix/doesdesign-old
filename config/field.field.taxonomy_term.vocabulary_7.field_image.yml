@@ -1,0 +1,38 @@
+uuid: c187705a-f14d-481a-b200-b6b9d4f593dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_image
+    - taxonomy.vocabulary.vocabulary_7
+  module:
+    - image
+id: taxonomy_term.vocabulary_7.field_image
+field_name: field_image
+entity_type: taxonomy_term
+bundle: vocabulary_7
+label: Afbeelding
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  alt_field: false
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  title_field: false
+  default_image:
+    alt: ''
+    title: ''
+    width: null
+    height: null
+    uuid: ''
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

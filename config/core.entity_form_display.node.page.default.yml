@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.upload
     - node.type.page
   module:
+    - file
     - path
     - text
 _core:
@@ -16,8 +18,8 @@ bundle: page
 mode: default
 content:
   body:
+    weight: -1
     type: text_textarea_with_summary
-    weight: 31
     settings:
       rows: 9
       summary_rows: 3
@@ -59,5 +61,11 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  upload:
+    weight: 1
+    type: file_generic
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
 hidden: {  }
