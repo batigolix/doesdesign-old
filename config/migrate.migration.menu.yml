@@ -1,0 +1,22 @@
+uuid: cd01b2a8-8cf4-40b6-b44f-797da6911b24
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: menu
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+label: Menus
+source:
+  plugin: menu
+  database_state_key: migrate_upgrade_7
+process:
+  id: menu_name
+  label: title
+  description: description
+destination:
+  plugin: 'entity:menu'
+template: menu
+migration_dependencies: {  }

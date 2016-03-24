@@ -1,0 +1,38 @@
+uuid: dc1db783-7634-4e1a-a209-9a836510f417
+langcode: en
+status: true
+dependencies:
+  module:
+    - filter
+id: d7_filter_format
+migration_tags:
+  - 'Drupal 7'
+label: 'Filter format configuration'
+source:
+  plugin: d7_filter_format
+  database_state_key: migrate_upgrade_7
+process:
+  format: format
+  name: name
+  cache: cache
+  filters:
+    plugin: iterator
+    source: filters
+    key: '@id'
+    process:
+      id:
+        plugin: static_map
+        bypass: true
+        source: name
+        map:
+          php_code: filter_null
+      settings:
+        plugin: filter_settings
+        source: settings
+      status:
+        plugin: default_value
+        default_value: true
+destination:
+  plugin: 'entity:filter_format'
+template: d7_filter_format
+migration_dependencies: {  }

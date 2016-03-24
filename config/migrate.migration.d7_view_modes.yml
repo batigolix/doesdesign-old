@@ -1,0 +1,36 @@
+uuid: de2ef033-8e74-4860-9255-85147b303e21
+langcode: en
+status: true
+dependencies:
+  module:
+    - field
+id: d7_view_modes
+migration_tags:
+  - 'Drupal 7'
+label: 'View modes'
+source:
+  plugin: d7_view_mode
+  database_state_key: migrate_upgrade_7
+process:
+  mode:
+    plugin: static_map
+    source: view_mode
+    bypass: true
+    map:
+      default: full
+  label:
+    plugin: static_map
+    source: view_mode
+    map:
+      search_index: 'Search index'
+      search_result: 'Search result'
+      rss: RSS
+      print: Print
+      teaser: Teaser
+      full: Full
+      default: Full
+  targetEntityType: entity_type
+destination:
+  plugin: 'entity:entity_view_mode'
+template: d7_view_modes
+migration_dependencies: {  }

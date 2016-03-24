@@ -1,0 +1,29 @@
+uuid: 5fd79637-6d02-47fb-a52b-4332545cf6dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - shortcut
+id: d7_shortcut_set
+migration_tags:
+  - 'Drupal 7'
+label: 'Shortcut sets'
+source:
+  plugin: d7_shortcut_set
+  database_state_key: migrate_upgrade_7
+process:
+  id:
+    -
+      plugin: static_map
+      bypass: true
+      source: set_name
+      map:
+        shortcut-set-1: default
+    -
+      plugin: machine_name
+      field: id
+  label: title
+destination:
+  plugin: 'entity:shortcut_set'
+template: d7_shortcut_set
+migration_dependencies: {  }

@@ -1,0 +1,45 @@
+uuid: ae7c1a82-88db-4a26-a600-0fcc34d91768
+langcode: en
+status: true
+dependencies:
+  config:
+    - migrate.migration.d7_field
+  module:
+    - field
+id: d7_field_instance
+migration_tags:
+  - 'Drupal 7'
+label: 'Field instance configuration'
+source:
+  plugin: d7_field_instance
+  constants:
+    status: true
+  database_state_key: migrate_upgrade_7
+process:
+  entity_type: entity_type
+  field_name: field_name
+  bundle: bundle
+  label: label
+  description: description
+  required: required
+  status: constants/status
+  settings:
+    plugin: d7_field_instance_settings
+    source:
+      - instance_settings
+      - widget_settings
+  default_value_function: ''
+  default_value:
+    plugin: d7_field_instance_defaults
+    source:
+      - default_value
+      - widget_settings
+destination:
+  plugin: 'entity:field_config'
+template: d7_field_instance
+migration_dependencies:
+  required:
+    - d7_field
+  optional:
+    - d7_node_type
+    - d7_comment_type

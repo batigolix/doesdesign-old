@@ -1,0 +1,29 @@
+uuid: 6bc36e31-e9c9-492e-a80f-1566c8837844
+langcode: en
+status: true
+dependencies:
+  config:
+    - migrate.migration.d7_node_type
+  module:
+    - node
+id: d7_node_title_label
+migration_tags:
+  - 'Drupal 7'
+label: 'Node title label'
+source:
+  plugin: d7_node_type
+  constants:
+    entity_type: node
+    field_name: title
+  database_state_key: migrate_upgrade_7
+process:
+  entity_type: constants/entity_type
+  bundle: type
+  field_name: constants/field_name
+  label: title_label
+destination:
+  plugin: 'entity:base_field_override'
+template: d7_node_title_label
+migration_dependencies:
+  required:
+    - d7_node_type

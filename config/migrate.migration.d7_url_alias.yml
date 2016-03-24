@@ -1,0 +1,31 @@
+uuid: 173e3f58-2180-4520-a500-cf0e70b5b054
+langcode: en
+status: true
+dependencies:
+  module:
+    - path
+id: d7_url_alias
+migration_tags:
+  - 'Drupal 7'
+label: 'URL aliases'
+source:
+  plugin: d7_url_alias
+  constants:
+    slash: /
+  database_state_key: migrate_upgrade_7
+process:
+  source:
+    plugin: concat
+    source:
+      - constants/slash
+      - source
+  alias:
+    plugin: concat
+    source:
+      - constants/slash
+      - alias
+  langcode: language
+destination:
+  plugin: url_alias
+template: d7_url_alias
+migration_dependencies: {  }
