@@ -21,7 +21,6 @@ function shakudo_preprocess_block(&$variables) {
       break;
     case 'system_branding_block':
       $variables['attributes']['class'][] = 'site-name-and-slogan';
-      dd($variables);
       // Hack logo until https://www.drupal.org/node/1507896 lands.
       // * (https://www.drupal.org/node/2472127)
       $variables['site_logo'] = '';
