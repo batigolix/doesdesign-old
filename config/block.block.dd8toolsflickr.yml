@@ -1,0 +1,21 @@
+uuid: a15a370f-9a96-4e4f-b500-dcdf1e6ebe32
+langcode: en
+status: true
+dependencies:
+  module:
+    - dd8_tools
+  theme:
+    - shakudo
+id: dd8toolsflickr
+theme: shakudo
+region: sidebar_second
+weight: -2
+provider: null
+plugin: flickr
+settings:
+  id: flickr
+  label: 'DD 8 tools: Flickr'
+  provider: dd8_tools
+  label_display: visible
+  flickr_items: '10'
+visibility: {  }
