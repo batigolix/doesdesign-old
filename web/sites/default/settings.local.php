@@ -93,3 +93,8 @@ $settings['extension_discovery_scan_tests'] = TRUE;
  * using these parameters in a request to rebuild.php.
  */
 $settings['rebuild_access'] = TRUE;
+
+error_reporting(-1);
+$conf['error_level'] = 2;
+ini_set('display_errors', TRUE);
+ini_set('display_startup_errors', TRUE);
