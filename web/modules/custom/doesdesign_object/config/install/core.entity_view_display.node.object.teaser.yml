@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.object.body
+    - field.field.node.object.field_material
+    - field.field.node.object.field_weight
+    - node.type.object
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: jJSggLoUhEXWR2vZ4it92DL2Bh158_mTr0vcnOdN8ts
+id: node.object.teaser
+targetEntityType: node
+bundle: object
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_material: true
+  field_weight: true

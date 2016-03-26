@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.object
+_core:
+  default_config_hash: dBQTLFYjipphvNcvOu7MZNoVrfmwxHkTj4KUQZiRP1g
+id: node.object.promote
+field_name: promote
+entity_type: node
+bundle: object
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
