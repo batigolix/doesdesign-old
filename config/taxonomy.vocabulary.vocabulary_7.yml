@@ -1,9 +1,0 @@
-uuid: f27d1afd-66ed-488d-a405-5c8cf670c4c1
-langcode: en
-status: true
-dependencies: {  }
-name: 'Sieraden en objecten'
-vid: vocabulary_7
-description: 'Sieraden en objecten met als specialiteit Mokume-gane'
-hierarchy: 0
-weight: 0

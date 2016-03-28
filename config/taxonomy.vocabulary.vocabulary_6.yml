@@ -1,9 +1,0 @@
-uuid: 7d0a8330-414d-4f5a-8100-c3f3ab3733c9
-langcode: en
-status: true
-dependencies: {  }
-name: Materiaal
-vid: vocabulary_6
-description: 'Bekijk sieraden aan de hand van de gebruikte materialen.'
-hierarchy: 0
-weight: 0
