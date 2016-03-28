@@ -26,7 +26,9 @@
         "drupal/coffee": "8.*",
         "drupal/migrate_tools": "8.*",
         "drupal/migrate_upgrade": "8.*",
-        "drupal/migrate_manifest": "8.*"
+        "drupal/migrate_manifest": "8.*",
+        "drupal/features": "8.*",
+        "drupal/migrate_source_json": "8.*"
     },
     "require-dev": {
         "behat/mink": "~1.6",

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "495b80eeef3744e4897b8132c542ee83",
-    "content-hash": "dfa7c98a1f82a896cff8f8b4d0013613",
+    "hash": "ec63a9111d0330a105c584f1b7b5ca54",
+    "content-hash": "a4049b5670f2d8e2a287048ac7741fc0",
     "packages": [
         {
             "name": "codegyre/robo",
@@ -773,6 +773,45 @@
             "time": "2016-01-15 13:19:51"
         },
         {
+            "name": "drupal/config_update",
+            "version": "8.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/config_update.git",
+                "reference": "ac1526df5836a611f04bb421945beddb6306b7f2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/config_update-8.x-1.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/config": "8.*",
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/config_update_ui": "self.version"
+            },
+            "suggest": {
+                "drupal/config": "Required by drupal/config_update_ui",
+                "drupal/core": "Required by drupal/config_update_ui"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides basic revert and update functionality for other modules",
+            "homepage": "https://www.drupal.org/project/config_update",
+            "time": "2016-03-01 16:28:35"
+        },
+        {
             "name": "drupal/console",
             "version": "0.10.14",
             "source": {
@@ -1065,6 +1104,45 @@
             "time": "2016-03-14 20:10:03"
         },
         {
+            "name": "drupal/features",
+            "version": "8.3.0-alpha6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/features",
+                "reference": "a188dcbda9afcd42652eef966b222a694f7df861"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/features-8.x-3.0-alpha6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/config": "8.*",
+                "drupal/config_update": "8.*",
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/features_ui": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/features_ui"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-3.x": "8.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Enables administrators to package configuration into modules.",
+            "homepage": "https://www.drupal.org/project/features",
+            "time": "2016-01-28 20:05:18"
+        },
+        {
             "name": "drupal/migrate_manifest",
             "version": "8.1.2",
             "source": {
@@ -1148,6 +1226,32 @@
             "description": "Enhancements to core migration support",
             "homepage": "https://www.drupal.org/project/migrate_plus",
             "time": "2016-03-16 20:28:22"
+        },
+        {
+            "name": "drupal/migrate_source_json",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/migrate_source_json.git",
+                "reference": "b2e4f37a95866ecb8b5dd5fda81d78e6d4af4ccd"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/migrate": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "JSON source migration.",
+            "homepage": "https://www.drupal.org/project/migrate_source_json",
+            "time": "2015-11-20 19:55:14"
         },
         {
             "name": "drupal/migrate_tools",

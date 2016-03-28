@@ -1,3 +1,4 @@
 migration:
 valencia:web boris$ ../vendor/drush/drush/drush migrate-manifest --legacy-db-url=mysql://root:root@localhost/doesdesign manifest.yml
 
+update `node__body` set body_format = 'basic_html' where body_format = '3'

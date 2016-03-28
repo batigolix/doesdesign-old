@@ -2,7 +2,7 @@
 - d7_taxonomy_vocabulary
 - taxonomy_settings
 - d7_node_settings
-#- d7_node_title_label
+- d7_node_title_label
 - d7_user_role
 - d7_user
 - d7_field
@@ -12,38 +12,37 @@
 - d7_field_instance
 - d7_node_type
 - d7_node__story
-
-#migrate.migration.block_content_body_field
-#migrate.migration.block_content_type
-#migrate.migration.d7_block
-#migrate.migration.d7_custom_block
-#migrate.migration.d7_dblog_settings
-#migrate.migration.d7_file
-#migrate.migration.d7_filter_format
-#migrate.migration.d7_image_settings
-#migrate.migration.d7_image_styles
-#migrate.migration.d7_node_revision__blog
-#migrate.migration.d7_node_revision__object
-#migrate.migration.d7_node_revision__page
-#migrate.migration.d7_node_revision__story
-#migrate.migration.d7_node_revision__webform
-#migrate.migration.d7_node__blog
-#migrate.migration.d7_node__object
-#migrate.migration.d7_node__page
-#migrate.migration.d7_node__webform
-#migrate.migration.d7_search_settings
-#migrate.migration.d7_shortcut
-#migrate.migration.d7_shortcut_set
-#migrate.migration.d7_shortcut_set_users
-#migrate.migration.d7_view_modes
-#migrate.migration.menu
-#migrate.migration.menu_links
-#migrate.migration.menu_settings
-#migrate.migration.search_page
-#migrate.migration.text_settings
-#migrate.migration.update_settings
-#migrate.migration.user_picture_entity_display
-#migrate.migration.user_picture_entity_form_display
-#migrate.migration.user_picture_field
-#migrate.migration.user_picture_field_instance
+- d7_node__blog
+- d7_node__object
+- d7_node__page
+- d7_node__webform
+- d7_filter_format
+- d7_view_modes
+- block_content_body_field
+- block_content_type
+- d7_block
+- d7_custom_block
+- d7_dblog_settings
+- d7_file
+- d7_image_settings
+- d7_image_styles
+- d7_node_revision__blog
+- d7_node_revision__object
+- d7_node_revision__page
+- d7_node_revision__story
+- d7_node_revision__webform
+- d7_search_settings
+- d7_shortcut
+- d7_shortcut_set
+- d7_shortcut_set_users
+- menu
+- menu_links
+- menu_settings
+- search_page
+- text_settings
+- update_settings
+- user_picture_entity_display
+- user_picture_entity_form_display
+- user_picture_field
+- user_picture_field_instance
 #migrate_plus.migration_group.default
