@@ -1,0 +1,22 @@
+uuid: 41b0b808-beb0-40f0-b252-66868f60a961
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - shakudo
+_core:
+  default_config_hash: 4QlSnWBcxxKMIFRM8sbu_MjSkcp3NjGgnVrc-lynQHI
+id: shakudo_login
+theme: shakudo
+region: sidebar_first
+weight: 0
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,22 @@
+id: test
+label: Test
+source:
+  plugin: json_source
+  path: 'http://doesdesign.val/node.json?type=object'
+  headers:
+    Accept: 'application/json' 
+    Token: 123
+  identifier: nid
+  identifierDepth: 0
+  fields:
+    - nid
+    - body
+    - field_gewicht
+destination:
+  plugin: entity:node
+process:
+  type:
+    plugin: default_value
+    default_value: object
+  title: title
+  body: body
