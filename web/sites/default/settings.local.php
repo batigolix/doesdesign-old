@@ -36,7 +36,7 @@ assert_options(ASSERT_ACTIVE, TRUE);
 /**
  * Enable local development services.
  */
-$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+// $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
 
 /**
  * Show all error messages, with backtrace information.
@@ -44,13 +44,13 @@ $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml'
  * In case the error level could not be fetched from the database, as for
  * example the database connection failed, we rely only on this value.
  */
-$config['system.logging']['error_level'] = 'verbose';
+// $config['system.logging']['error_level'] = 'verbose';
 
 /**
  * Disable CSS and JS aggregation.
  */
-$config['system.performance']['css']['preprocess'] = FALSE;
-$config['system.performance']['js']['preprocess'] = FALSE;
+// $config['system.performance']['css']['preprocess'] = FALSE;
+// $config['system.performance']['js']['preprocess'] = FALSE;
 
 /**
  * Disable the render cache (this includes the page cache).
@@ -64,7 +64,7 @@ $config['system.performance']['js']['preprocess'] = FALSE;
  *
  * Do not use this setting until after the site is installed.
  */
-$settings['cache']['bins']['render'] = 'cache.backend.null';
+// $settings['cache']['bins']['render'] = 'cache.backend.null';
 
 /**
  * Disable Dynamic Page Cache.
@@ -73,7 +73,7 @@ $settings['cache']['bins']['render'] = 'cache.backend.null';
  * cacheability metadata is present (and hence the expected behavior). However,
  * in the early stages of development, you may want to disable it.
  */
-$settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
+// $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
 
 /**
  * Allow test modules and themes to be installed.
@@ -82,7 +82,7 @@ $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
  * During development it can be useful to install test extensions for debugging
  * purposes.
  */
-$settings['extension_discovery_scan_tests'] = TRUE;
+// $settings['extension_discovery_scan_tests'] = TRUE;
 
 /**
  * Enable access to rebuild.php.
