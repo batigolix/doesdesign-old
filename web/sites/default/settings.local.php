@@ -92,9 +92,4 @@ $settings['extension_discovery_scan_tests'] = TRUE;
  * be gained by generating a query string from rebuild_token_calculator.sh and
  * using these parameters in a request to rebuild.php.
  */
-$settings['rebuild_access'] = TRUE;
-
-error_reporting(-1);
-$conf['error_level'] = 2;
-ini_set('display_errors', TRUE);
-ini_set('display_startup_errors', TRUE);
+$settings['rebuild_access'] = FALSE;
