@@ -98,3 +98,14 @@ error_reporting(-1);
 $conf['error_level'] = 2;
 ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
+
+$databases['default']['default'] = array (
+  'database' => 'dd1',
+  'username' => 'root',
+  'password' => 'root',
+  'prefix' => '',
+  'host' => 'localhost',
+  'port' => '',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);

@@ -1,0 +1,22 @@
+uuid: 8337127f-ac08-4ec7-9f25-00f053bb83e7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - shakudo
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: shakudo_messages
+theme: shakudo
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

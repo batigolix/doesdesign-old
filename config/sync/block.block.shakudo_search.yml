@@ -1,0 +1,22 @@
+uuid: 707ab090-d6f9-44d5-a422-9590e5d2d830
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - shakudo
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: shakudo_search
+theme: shakudo
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

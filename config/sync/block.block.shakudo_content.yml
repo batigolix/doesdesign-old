@@ -1,0 +1,22 @@
+uuid: 23a88829-ea51-496a-8f9b-fe303d763956
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - shakudo
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: shakudo_content
+theme: shakudo
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
