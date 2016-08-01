@@ -9,7 +9,7 @@ _core:
 id: shakudo_local_actions
 theme: shakudo
 region: content
-weight: -20
+weight: -3
 provider: null
 plugin: local_actions_block
 settings:

@@ -1,6 +1,6 @@
 uuid: 0e21a9c9-4302-4d5e-bd09-e42239443870
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -12,8 +12,8 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: shakudo_footer
 theme: shakudo
-region: header
-weight: 0
+region: '-1'
+weight: -6
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
