@@ -285,7 +285,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'X8kRfr1f3jGhnnhjn5AmlpzDeBhNy87GV-DgUTZVEHGKDB_bdbtt5j0SAbZw5zaCrmNaCUPC1g';
+#$settings['hash_salt'] = 'LGDXaZbzfNZJUHj8VDbdaxL9MRLKAa9Gjwn4IPdAYSrP6DGZrC_hEWWTvxVH36HnwK_3twJhUA';
 
 /**
  * Deployment identifier.
@@ -714,9 +714,10 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
  *
  * Keep this code block at the end of this file to take full effect.
  */
+# if (file_exists(__DIR__ . '/settings.local.php')) {
+#   include __DIR__ . '/settings.local.php';
+# }
+
 if (file_exists(__DIR__ . '/settings.local.php')) {
-   include __DIR__ . '/settings.local.php';
+  include __DIR__ . '/settings.local.php';
 }
-$settings['install_profile'] = 'minimal';
-//$config_directories['sync'] = 'sites/default/files/config_knhPQ2MO8H5-COd2I6PQvzKeD01HgtTxZnFiA_46DTfvLSvt9w1dO9JUXYtNYJROb9h9vUTzSQ/sync';
-$config_directories['sync'] = '../config';
