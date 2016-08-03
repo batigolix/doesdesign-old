@@ -1,11 +1,11 @@
 uuid: 1c72a55b-6a76-49d6-ad9b-2f3a7439a504
-name: Site-Install
-mail: admin@example.com
-slogan: ''
+name: Doesdesign
+mail: coxdoes@gmail.com
+slogan: 'Mokume-gane jewelry'
 page:
   403: ''
   404: ''
-  front: /node
+  front: /homepage
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
