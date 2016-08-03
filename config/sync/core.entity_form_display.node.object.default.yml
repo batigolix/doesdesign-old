@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.object.body
+    - field.field.node.object.field_image
+    - field.field.node.object.field_material
+    - field.field.node.object.field_object_type
+    - image.style.thumbnail
     - node.type.object
   module:
+    - image
     - path
     - text
 id: node.object.default
@@ -26,6 +31,29 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+  field_image:
+    weight: 34
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_material:
+    weight: 32
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_object_type:
+    weight: 33
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   path:
     type: path
     weight: 30

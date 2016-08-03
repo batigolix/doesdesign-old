@@ -4,8 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.object.body
+    - field.field.node.object.field_image
+    - field.field.node.object.field_material
+    - field.field.node.object.field_object_type
     - node.type.object
   module:
+    - image
     - text
     - user
 id: node.object.default
@@ -19,6 +23,28 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+  field_image:
+    weight: 104
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_material:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_object_type:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   links:
     weight: 100
 hidden: {  }
