@@ -1,0 +1,20 @@
+uuid: 7d085c14-78b1-42c5-b598-5f3cfe070f9e
+langcode: en
+status: true
+dependencies:
+  module:
+    - dd8_tools
+  theme:
+    - shakudo
+id: dd8toolsgoogletranslate
+theme: shakudo
+region: sidebar_first
+weight: -8
+provider: null
+plugin: gtranslate
+settings:
+  id: gtranslate
+  label: 'DD 8 tools: Google translate'
+  provider: dd8_tools
+  label_display: '0'
+visibility: {  }

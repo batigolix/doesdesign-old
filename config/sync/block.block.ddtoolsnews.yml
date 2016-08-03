@@ -1,0 +1,36 @@
+uuid: 83aacf0b-7ef3-440e-ba25-7dc9cf505db7
+langcode: en
+status: true
+dependencies:
+  module:
+    - dd8_tools
+  theme:
+    - shakudo
+id: ddtoolsnews
+theme: shakudo
+region: content
+weight: -2
+provider: null
+plugin: News
+settings:
+  id: News
+  label: News
+  provider: dd8_tools
+  label_display: '0'
+  content: 'Default news content'
+  cache:
+    max_age: 3600
+    contexts:
+      - cache_context.user.roles
+      - cache_context.user.roles
+      - cache_context.user.roles
+      - cache_context.user.roles
+      - cache_context.user.roles
+      - cache_context.user.roles
+      - cache_context.user.roles
+      - cache_context.user.roles
+      - cache_context.user.roles
+      - cache_context.user.roles
+      - cache_context.user.roles
+  news_items: '10'
+visibility: {  }
