@@ -9,13 +9,13 @@ dependencies:
 id: dd8toolsflickr
 theme: shakudo
 region: sidebar_first
-weight: -8
+weight: -7
 provider: null
 plugin: flickr
 settings:
   id: flickr
   label: 'DD 8 tools: Flickr'
   provider: dd8_tools
-  label_display: visible
+  label_display: '0'
   flickr_items: '10'
 visibility: {  }

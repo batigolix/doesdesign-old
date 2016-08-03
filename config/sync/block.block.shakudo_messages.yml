@@ -11,7 +11,7 @@ _core:
 id: shakudo_messages
 theme: shakudo
 region: content
-weight: -7
+weight: -8
 provider: null
 plugin: system_messages_block
 settings:

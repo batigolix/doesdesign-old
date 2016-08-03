@@ -10,15 +10,15 @@ dependencies:
 id: dd8toolsslideshow
 theme: shakudo
 region: content
-weight: -2
+weight: -3
 provider: null
 plugin: slideshow
 settings:
   id: slideshow
   label: 'DD 8 tools: Slideshow'
   provider: dd8_tools
-  label_display: visible
-  slideshow_items: '3'
+  label_display: '0'
+  slideshow_items: '7'
   slideshow_order: 'created '
 visibility:
   request_path:

@@ -11,7 +11,7 @@ _core:
 id: shakudo_search
 theme: shakudo
 region: sidebar_first
-weight: -1
+weight: -6
 provider: null
 plugin: search_form_block
 settings:
