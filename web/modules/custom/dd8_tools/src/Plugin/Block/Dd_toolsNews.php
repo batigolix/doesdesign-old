@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\dd_tools\Plugin\Block\Dd_toolsNews .
+ * Contains \Drupal\dd8_tools\Plugin\Block\Dd_toolsNews .
  */
 
-namespace Drupal\dd_tools\Plugin\Block;
+namespace Drupal\dd8_tools\Plugin\Block;
 
 use Drupal\Core\block\BlockBase;
 use Drupal\Core\Form\FormStateInterface;
@@ -27,7 +27,7 @@ class Dd_toolsNews extends BlockBase {
    */
   public function defaultConfiguration() {
     return array(
-      'label' => t("News"),
+      'label' => t("DD tools: News"),
       'content' => t('Default news content'),
       'cache' => array(
         'max_age' => 3600,
@@ -42,30 +42,17 @@ class Dd_toolsNews extends BlockBase {
    * Overrides \Drupal\Core\Block\BlockBase::blockForm().
    */
   public function blockForm($form, FormStateInterface $form_state) {
-    $form['content'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Block contents'),
-      '#size' => 60,
-      '#description' => t('This text will appear in the demo block.'),
-      '#default_value' => $this->configuration['content'],
-    );
 
-    $form['news_items'] = array(
+    // Retrieve existing configuration for this block.
+    $config = $this->getConfiguration();
+    $nr_items = isset($config['nr_items']) ? $config['nr_items'] : 3;
+    $form['nr_items'] = array(
       '#type' => 'select',
       '#options' => array(2 => 2, 5 => 5, 10 => 10),
       '#description' => t('This number of items will be shown in the news block'),
       '#title' => t('Number of items'),
-      '#default_value' => $this->configuration['news_items'],
+      '#default_value' => $nr_items,
     );
-
-    $form['block_count'] = array(
-      '#type' => 'select',
-      '#options' => array(2 => 2, 5 => 5, 10 => 10),
-      '#description' => t('This number of items will be shown in the news block'),
-      '#title' => t('Number of items'),
-      '#default_value' => $this->configuration['block_count'],
-    );
-
     return $form;
   }
 
@@ -73,7 +60,9 @@ class Dd_toolsNews extends BlockBase {
    * Overrides \Drupal\Core\Block\BlockBase::blockSubmit().
    */
   public function blockSubmit($form, FormStateInterface $form_state) {
-    $this->configuration['content'] = $form_state->getValue('content');
+
+    // Save our custom settings when the form is submitted.
+    $this->setConfigurationValue('nr_items', $form_state->getValue('nr_items'));
   }
 
   /**
@@ -81,61 +70,57 @@ class Dd_toolsNews extends BlockBase {
    */
   public function build() {
 
-//  case 'News':
-//      $blocks['subject'] = t('Photo\'s on News');
-//      $blocks['content'] = array(
-//        '#markup' => '<div id="News_images"> </div>',
-//        '#attached' => array(
-//          'js' => array(
-//            'data' => drupal_get_path('module', 'dd_tools') . '/js/News.js',
-//            array(
-//              'data' => array(
-//                'dd_tools' => array(
-//                  'block_items' => variable_get('News_items', 13),
-//                ),
-//              ),
-//              'type' => 'setting',
-//            ),
-//          ),
-//        ),
-//      );
+    $config = $this->getConfiguration();
+    $nr_items = isset($config['nr_items']) ? $config['nr_items'] : 3;
 
+    // Fetches the slideshow nodes.
+    $query = \Drupal::entityQuery('node')
+      ->condition('status', 1)
+      ->condition('type', 'article')
+      ->range(0, $nr_items);
+    $nids = $query->execute();
 
-    $query = db_select('node', 'n')
-      ->fields('n')
-      ->addTag('node_access')
-//      ->addMetaData('base_table', 'forum_index')
-//      ->orderBy('created', 'DESC')
-      ->range(0, $this->configuration['block_count']);
+    $items = array();
+    foreach ($nids as $nid) {
+      $node = entity_load('node', $nid);
 
+// @todo figure out fetchign values from node object 
+//kint($node);
+//      $node_view = entity_view($node, 'hero_teaser');
+//      kint($node_view);
 
-    $result = $query->execute();
-    dpm($result);
-
-    foreach($result as $row) {
-      dsm($row);
-      var_dump($row);
+      $items[] = array(
+//        '#markup' => drupal_render($node_view),
+        '#markup' => 'sfdsdf',
+        '#wrapper_attributes' => array('class' => array('slide')),
+      );
     }
 
     $elements = array();
-    if ($node_title_list = node_title_list($result)) {
-      $elements['forum_list'] = $node_title_list;
-//      $elements['forum_more'] = array(
-//        '#type' => 'more_link',
-//        '#url' => Url::fromRoute('forum.index'),
-//        '#attributes' => array('title' => $this->t('Read the latest forum topics.')),
-//      );
-    }
+//    if ($node_title_list = node_title_list($result)) {
+//      $elements['forum_list'] = $node_title_list;
+////      $elements['forum_more'] = array(
+////        '#type' => 'more_link',
+////        '#url' => Url::fromRoute('forum.index'),
+////        '#attributes' => array('title' => $this->t('Read the latest forum topics.')),
+////      );
+//    }
     $build = array();
-    $build['elements']['#markup'] = $elements;
-    $build['elements']['#markup'] = 'sdfsdafsd';
-
-    $build['container']['#markup'] = '<div id="News_images">sdcsadvsdvsd </div>';
-//    $test = \Drupal::config('nognix.settings')->get('doh_you');
-//    $build['stuff2']['#markup'] = $this->configuration['content'];
-//    $build['#attached']['library'][] = 'dd_tools/News';
-    $build['#attached']['library'][] = 'dd_tools/misc';
+//    $build['elements']['#markup'] = $elements;
+    $build['items']['#markup'] = $nr_items;
+    $build['elements']['#markup'] = 'placeholder';
     return $build;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function blockValidate($form, FormStateInterface $form_state) {
+    $nr_items = $form_state->getValue('nr_items');
+
+    if (!is_numeric($nr_items)) {
+      $form_state->setErrorByName('nr_items', t('Needs to be an interger'));
+    }
   }
 
 }

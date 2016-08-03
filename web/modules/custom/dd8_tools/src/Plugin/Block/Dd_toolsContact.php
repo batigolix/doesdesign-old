@@ -77,7 +77,7 @@ class Dd_toolsContact extends BlockBase {
       ));
       $items[] = \Drupal::l($img, $url);
     }
-    $build['doespic'] = array(
+    $doespic = array(
       '#prefix' => '<div class="doespic">',
       '#suffix' => '</div>',
       '#theme' => 'image',
@@ -92,6 +92,7 @@ class Dd_toolsContact extends BlockBase {
         'alt' => 'Foto Birgit Doesborg',
       ),
     );
+//    $build['doespic'] = $doespic;
     $build['doestxt'] = array(
       '#prefix' => '<div class="doestxt">',
       '#suffix' => '</div>',

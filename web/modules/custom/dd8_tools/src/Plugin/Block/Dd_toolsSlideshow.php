@@ -76,8 +76,7 @@ class Dd_toolsSlideshow extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public
-  function blockForm($form, FormStateInterface $form_state) {
+  public function blockForm($form, FormStateInterface $form_state) {
     $form = parent::blockForm($form, $form_state);
 
     // Retrieve existing configuration for this block.
@@ -116,8 +115,7 @@ class Dd_toolsSlideshow extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public
-  function blockSubmit($form, FormStateInterface $form_state) {
+  public function blockSubmit($form, FormStateInterface $form_state) {
     // Save our custom settings when the form is submitted.
     $this->setConfigurationValue('slideshow_items', $form_state->getValue('slideshow_items'));
     $this->setConfigurationValue('slideshow_order', $form_state->getValue('slideshow_order'));
@@ -126,8 +124,7 @@ class Dd_toolsSlideshow extends BlockBase {
   /**
    * {@inheritdoc}
    */
-  public
-  function blockValidate($form, FormStateInterface $form_state) {
+  public function blockValidate($form, FormStateInterface $form_state) {
     $slideshow_items = $form_state->getValue('slideshow_items');
 
     if (!is_numeric($slideshow_items)) {
