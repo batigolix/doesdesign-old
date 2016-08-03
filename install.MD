@@ -31,3 +31,9 @@ colors
 http://www.colorcombos.com/color-schemes/43/ColorCombo43.html
 https://wordpress.org/themes/twentysixteen/
 https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Montserrat
+
+todo:
+- disable commenting
+- sidebar first div overlaps main
+- block titles
+- homepage controller
