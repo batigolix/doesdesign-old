@@ -316,6 +316,14 @@ footer {
   }
 }
 
+.layout-sidebar-first {
+  background: #ffff00;
+  @include span-columns(3);
+  @include media($tablet) {
+    @include span-columns(10 of 10);
+  }
+}
+
 .dd-tools-flickr {
   padding: 0px;
   margin: 0px;

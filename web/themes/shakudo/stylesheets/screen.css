@@ -527,6 +527,23 @@ footer {
       .layout-sidebar-second:last-child {
         margin-right: 0; } }
 
+.layout-sidebar-first {
+  background: #ffff00;
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 28.20513%; }
+  .layout-sidebar-first:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .layout-sidebar-first {
+      float: left;
+      display: block;
+      margin-right: 2.5641%;
+      width: 100%; }
+      .layout-sidebar-first:last-child {
+        margin-right: 0; } }
+
 .dd-tools-flickr {
   padding: 0px;
   margin: 0px; }
