@@ -37,3 +37,7 @@ todo:
 //- sidebar first div overlaps main
 //- block titles
 //- homepage controller
+- multip file upload / files source
+- translate interface
+- resp image
+

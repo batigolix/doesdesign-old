@@ -1,0 +1,23 @@
+uuid: 8f0c434a-cf77-4c96-b0d0-d682d500f816
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.object
+id: node.object.field_weight
+field_name: field_weight
+entity_type: node
+bundle: object
+label: Weight
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: gr
+field_type: decimal
