@@ -34,6 +34,6 @@ https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Montserrat
 
 todo:
 - disable commenting
-- sidebar first div overlaps main
-- block titles
-- homepage controller
+//- sidebar first div overlaps main
+//- block titles
+//- homepage controller
