@@ -1,0 +1,45 @@
+uuid: f5393094-aeb2-44c4-888f-48ddd956cf50
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ITn0IgMca-9r8tal8PKZpc3GWVeyUUUOj8sn3bhp5qQ
+id: objects
+migration_tags: null
+migration_group: Doesdesign
+label: Objects
+source:
+  plugin: json_source
+  path: 'http://doesdesign.val/objects.json'
+  headers:
+    Accept: application/json
+  identifier: nid
+  identifierDepth: 2
+  fields:
+    - nid
+    - title
+    - body
+    - catgeroy
+    - year
+    - material
+    - weight
+    - price
+    - created
+    - updated
+process:
+  type:
+    plugin: default_value
+    default_value: object
+  title: title
+  body: body
+  sticky:
+    plugin: default_value
+    default_value: 0
+  created: created
+  updated: updated
+  uid:
+    plugin: default_value
+    default_value: 1
+destination:
+  plugin: 'entity:node'
+migration_dependencies: {  }

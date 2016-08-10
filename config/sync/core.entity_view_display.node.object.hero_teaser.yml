@@ -1,0 +1,39 @@
+uuid: 4550487f-6de6-4b13-8bd5-72aa0d4d71d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.hero_teaser
+    - field.field.node.object.body
+    - field.field.node.object.field_image
+    - field.field.node.object.field_material
+    - field.field.node.object.field_object_type
+    - field.field.node.object.field_price
+    - field.field.node.object.field_weight
+    - field.field.node.object.field_year
+    - node.type.object
+  module:
+    - image
+    - user
+id: node.object.hero_teaser
+targetEntityType: node
+bundle: object
+mode: hero_teaser
+content:
+  field_image:
+    weight: 104
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  body: true
+  field_material: true
+  field_object_type: true
+  field_price: true
+  field_weight: true
+  field_year: true
+  langcode: true
+  links: true

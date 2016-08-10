@@ -1,0 +1,10 @@
+uuid: 7405544a-8269-404d-aadf-a4d837054053
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.hero_teaser
+label: 'Hero teaser'
+targetEntityType: node
+cache: true
