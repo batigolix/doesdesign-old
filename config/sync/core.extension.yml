@@ -7,6 +7,7 @@ module:
   config: 0
   config_translation: 0
   contextual: 0
+  color: 0
   datetime: 0
   dblog: 0
   dd8_tools: 0
@@ -53,3 +54,4 @@ theme:
   shakudo: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
+profile: standard
